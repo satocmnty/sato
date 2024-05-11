@@ -1,6 +1,6 @@
 #!/bin/sh
 # Copyright (c) 2012-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2021 The Sato Core developers
+# Copyright (c) 2017-2019 The Raven Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,10 +36,7 @@ if [ "${SATO_GENBUILD_NO_GIT}" != "1" -a -e "$(which git 2>/dev/null)" -a "$(git
 
     # otherwise generate suffix from git, i.e. string like "59887e8-dirty"
     SUFFIX=$(git rev-parse --short HEAD)
-
-    git diff-index --quiet HEAD -- || SUFFIX="$SUFFIX-kingkong"
-
-    
+    git diff-index --quiet HEAD -- || SUFFIX="$SUFFIX-dirty"
 fi
 
 if [ -n "$DESC" ]; then
