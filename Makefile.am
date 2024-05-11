@@ -18,8 +18,6 @@ pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libsatoconsensus.pc
 endif
 
-
-
 SATOD_BIN=$(top_builddir)/src/$(SATO_DAEMON_NAME)$(EXEEXT)
 SATO_QT_BIN=$(top_builddir)/src/qt/$(SATO_GUI_NAME)$(EXEEXT)
 SATO_CLI_BIN=$(top_builddir)/src/$(SATO_CLI_NAME)$(EXEEXT)
